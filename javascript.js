@@ -20,23 +20,22 @@ function getComputerChoice() {
 
 const resultsText = document.querySelector('.resultsDisplay');
 const playerText = document.querySelector('.playerScore');
-const computerText = document.querySelector('.computerScore');
+const computerScoreText = document.querySelector('.computerScore');
 const winnerText = document.querySelector('.winnerDisplay');
+const computerMoveText = document.querySelector('.computerMove');
 
 //plays a single round of the game and returns who won
 function playRound (playerSelection, computerSelection) {
     
+    computerMoveText.textContent = `Computer picked ${computerSelection}`;
 
     playerSelection = playerSelection.toLowerCase();
-
-    console.log("You played " + playerSelection);
-    console.log("Computer played " + computerSelection);
 
     if ((playerSelection == "rock" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "scissors") || 
     (playerSelection == "scissors" && computerSelection == "rock")) {
         computerScore++;
         resultsText.textContent = `Ah-oh, ${computerSelection} beats ${playerSelection}, the computer wins!`;
-        computerText.textContent = `Computer Score: ${computerScore}`;
+        computerScoreText.textContent = `Computer Score: ${computerScore}`;
     } else if ((playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper") || 
     (playerSelection == "rock" && computerSelection == "scissors")) {
         playerScore++;

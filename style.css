@@ -51,14 +51,10 @@ img {
     gap: 50px;
 }
 
-.resultsDisplay, .winnerDisplay {
+.resultsDisplay, .winnerDisplay, .computerMove {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
-    font-size: 32px;
-}
-
-.winnerDisplay {
     padding-top: 50px;
+    font-size: 32px;
 }
