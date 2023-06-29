@@ -20,7 +20,7 @@ body {
 }
 
 img {
-    height: auto;
+    height: 250px;
     width: 250px;
 }
 
@@ -28,6 +28,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 150px;
     gap: 50px;
 }
