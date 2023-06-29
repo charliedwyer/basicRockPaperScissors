@@ -8,7 +8,7 @@ body {
     background-color: gainsboro;
 }
 
-.pageHeader {
+.pageHeader, .pageFooter {
     display: flex;
     background-color: silver;
     color: #ff2400;
@@ -57,4 +57,13 @@ img {
     align-items: center;
     padding-top: 50px;
     font-size: 32px;
+}
+
+.pageFooter {
+    font-size: 16px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-left: 50px;
 }
