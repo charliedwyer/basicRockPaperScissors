@@ -23,3 +23,11 @@ img {
     height: auto;
     width: 250px;
 }
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    gap: 50px;
+}
