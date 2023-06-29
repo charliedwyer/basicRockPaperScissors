@@ -18,3 +18,8 @@ body {
     padding-bottom: 10px;
     align-items: center;
 }
+
+img {
+    height: auto;
+    width: 250px;
+}
