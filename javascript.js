@@ -39,7 +39,7 @@ function playRound (playerSelection, computerSelection) {
     let computerScore = 0;
     let continueGame = true;
 
-function game() {
+/*function game() {
 
     playerScore = 0;
     computerScore = 0;
@@ -72,7 +72,7 @@ function game() {
 
     }
 
-}
+}*/
 
 game();
 
