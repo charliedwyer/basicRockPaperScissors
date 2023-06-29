@@ -31,3 +31,11 @@ img {
     padding-top: 150px;
     gap: 50px;
 }
+
+.resultsDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    font-size: 32px;
+}

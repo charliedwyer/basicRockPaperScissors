@@ -16,8 +16,13 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+
+const resultsText = document.querySelector('.resultsDisplay');
+
 //plays a single round of the game and returns who won
 function playRound (playerSelection, computerSelection) {
+    
+
     playerSelection = playerSelection.toLowerCase();
 
     console.log("You played " + playerSelection);
@@ -26,14 +31,20 @@ function playRound (playerSelection, computerSelection) {
     if ((playerSelection == "rock" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "scissors") || 
     (playerSelection == "scissors" && computerSelection == "rock")) {
         computerScore++;
-        return "Ah-oh, " + computerSelection + " beats " + playerSelection + ", the computer wins!";
+        resultsText.textContent = `Ah-oh, ${computerSelection} beats ${playerSelection}, the computer wins!`;
+        return "Ah-oh, " + playerSelection + " loses to " + computerSelection + ", you lose!";
+        //resultElement.textContent = `Ah-oh, ${computerSelection} beats ${playerSelection}, the computer wins!`;
     } else if ((playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper") || 
     (playerSelection == "rock" && computerSelection == "scissors")) {
         playerScore++;
+        resultsText.textContent = `YAY, ${playerSelection} beats ${computerSelection}, you win!`;
         return "YAY, " + playerSelection + " beats " + computerSelection + ", you win!";
     } else if (playerSelection == computerSelection) {
+        resultsText.textContent = `It's a tie!`;
         return "It's a tie!";
     }
+
+
 }
 
 
