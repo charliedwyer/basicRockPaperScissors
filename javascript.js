@@ -1,6 +1,6 @@
 console.log("Hello Game");
 
-
+//Randomly returns either rock, paper, or scissors for the computer's choice
 function getComputerChoice() {
     let computerRandom = Math.floor(Math.random() * 3);
     let computerChoice = "";
@@ -16,6 +16,7 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+//plays a single round of the game and returns who won
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
@@ -34,6 +35,23 @@ function playRound (playerSelection, computerSelection) {
         return "It's a tie!";
     }
 }
+
+
+const rockBtn = document.querySelector('.rockButton');
+rockBtn.addEventListener('click', function() {
+    console.log(playRound('rock', getComputerChoice()));
+});
+
+const paperBtn = document.querySelector('.paperButton');
+paperBtn.addEventListener('click', function() {
+    console.log(playRound('paper', getComputerChoice()));
+});
+
+const scissorsBtn = document.querySelector('.scissorsButton');
+scissorsBtn.addEventListener('click', function() {
+    console.log(playRound('scissors', getComputerChoice()));
+});
+
 
     let playerScore = 0;
     let computerScore = 0;
@@ -74,7 +92,7 @@ function playRound (playerSelection, computerSelection) {
 
 }*/
 
-game();
+//game();
 
 
 
