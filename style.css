@@ -9,6 +9,7 @@ body {
 }
 
 .pageHeader {
+    display: flex;
     background-color: silver;
     color: #ff2400;
     font-size: 50px;
@@ -17,6 +18,16 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     align-items: center;
+}
+
+.playerScore, .computerScore {
+    display: flex;
+    font-size: 32px;
+    margin-left: auto;
+}
+
+.playerScore {
+    padding-left: 500px;
 }
 
 img {

@@ -1,4 +1,4 @@
-console.log("Hello Game");
+
 
 //Randomly returns either rock, paper, or scissors for the computer's choice
 function getComputerChoice() {
@@ -18,6 +18,8 @@ function getComputerChoice() {
 
 
 const resultsText = document.querySelector('.resultsDisplay');
+const playerText = document.querySelector('.playerScore');
+const computerText = document.querySelector('.computerScore');
 
 //plays a single round of the game and returns who won
 function playRound (playerSelection, computerSelection) {
@@ -32,12 +34,13 @@ function playRound (playerSelection, computerSelection) {
     (playerSelection == "scissors" && computerSelection == "rock")) {
         computerScore++;
         resultsText.textContent = `Ah-oh, ${computerSelection} beats ${playerSelection}, the computer wins!`;
+        computerText.textContent = `Computer Score: ${computerScore}`;
         return "Ah-oh, " + playerSelection + " loses to " + computerSelection + ", you lose!";
-        //resultElement.textContent = `Ah-oh, ${computerSelection} beats ${playerSelection}, the computer wins!`;
     } else if ((playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper") || 
     (playerSelection == "rock" && computerSelection == "scissors")) {
         playerScore++;
         resultsText.textContent = `YAY, ${playerSelection} beats ${computerSelection}, you win!`;
+        playerText.textContent = `Player Score: ${playerScore}`;
         return "YAY, " + playerSelection + " beats " + computerSelection + ", you win!";
     } else if (playerSelection == computerSelection) {
         resultsText.textContent = `It's a tie!`;
@@ -50,17 +53,17 @@ function playRound (playerSelection, computerSelection) {
 
 const rockBtn = document.querySelector('.rockButton');
 rockBtn.addEventListener('click', function() {
-    console.log(playRound('rock', getComputerChoice()));
+    playRound('rock', getComputerChoice());
 });
 
 const paperBtn = document.querySelector('.paperButton');
 paperBtn.addEventListener('click', function() {
-    console.log(playRound('paper', getComputerChoice()));
+    playRound('paper', getComputerChoice());
 });
 
 const scissorsBtn = document.querySelector('.scissorsButton');
 scissorsBtn.addEventListener('click', function() {
-    console.log(playRound('scissors', getComputerChoice()));
+    playRound('scissors', getComputerChoice());
 });
 
 
